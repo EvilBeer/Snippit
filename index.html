@@ -1,6 +1,9 @@
 <html>
 	<head>
 		<title>Snippit</title>
+		<script src="CodeMirror/lib/codemirror.js"></script>
+		<link rel="stylesheet" href="CodeMirror/lib/codemirror.css">
+		<script src="CodeMirror/mode/javascript/javascript.js"></script>
 	</head>
 	<body>
 		<div id="main-container">
@@ -10,6 +13,13 @@
 		</div>
 		<div id="footer">Made by Stan and Meow</div>
 	</body>
+	
+	<script>
+	var myCodeMirror = CodeMirror(document.getElementById("main-container"), {
+  value: "function myScript(){return 100;}\n",
+  mode:  "javascript"
+});
+	</script>
 	
 	<style>
 		html, body{
